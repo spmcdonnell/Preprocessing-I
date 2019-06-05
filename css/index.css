@@ -139,7 +139,7 @@ html {
   background-color: #7fb7ff;
   padding: 1%;
 }
-@media (max-width: 675px) {
+@media (max-width: 500px) {
   html {
     font-size: 55%;
   }
@@ -152,6 +152,11 @@ body {
   padding: 4%;
   box-shadow: 0px 0px 24px -3px rgba(0, 0, 0, 0.8);
   font-family: "Open Sans", sans-serif;
+}
+@media (max-width: 500px) {
+  body {
+    margin: 0 0 1%;
+  }
 }
 h1,
 h2,
@@ -186,15 +191,22 @@ h5 {
 p {
   font-size: 1.5rem;
 }
+.blue-icon {
+  color: #008cff;
+  margin-right: 0.3em;
+  min-width: 15px;
+}
 i.fas,
 i.fab {
+  color: #008cff;
   margin-right: 0.3em;
   min-width: 15px;
 }
 .flex {
   display: flex;
+  flex-direction: row;
 }
-@media (max-width: 675px) {
+@media (max-width: 500px) {
   .flex {
     flex-direction: column;
   }
@@ -206,7 +218,7 @@ i.fab {
 .right-side {
   width: 40%;
 }
-@media (max-width: 675px) {
+@media (max-width: 500px) {
   .left-side,
   .right-side {
     width: 100%;
@@ -214,7 +226,14 @@ i.fab {
 }
 /* Header */
 header {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 25px;
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+  }
 }
 header h2 {
   font-size: 2em;
@@ -225,9 +244,18 @@ header p.intro {
   font-family: Lato;
   margin-bottom: 25px;
 }
-@media (max-width: 675px) {
+@media (max-width: 500px) {
   header .introduction {
     order: 2;
+  }
+}
+header .contact-info {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 500px) {
+  header .contact-info {
+    flex-direction: column;
   }
 }
 header .contact-info p {
@@ -238,11 +266,14 @@ header .contact-info p {
 header .contact-info i.fas,
 header .contact-info i.fab {
   color: #008cff;
+  margin-right: 0.3em;
+  min-width: 15px;
   font-size: 0.9em;
 }
-@media (max-width: 675px) {
+@media (max-width: 500px) {
   header .contact-info {
     order: 1;
+    flex-direction: row;
   }
 }
 header .image-box {
@@ -264,11 +295,18 @@ nav {
   background-color: #008cff;
   padding: 10px 0;
 }
-nav ul.flex {
+nav ul {
+  display: flex;
+  flex-direction: row;
   justify-content: space-around;
 }
-@media (max-width: 675px) {
-  nav ul.flex {
+@media (max-width: 500px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  nav ul {
     flex-direction: row;
   }
 }
@@ -297,6 +335,15 @@ main ul li {
   line-height: 1.5;
   margin: 5px 0;
   color: #5f5f5f;
+}
+main section.main-content {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 500px) {
+  main section.main-content {
+    flex-direction: column;
+  }
 }
 main div.left-side div {
   margin: 0 0 25px;
